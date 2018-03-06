@@ -1,0 +1,18 @@
+<body>
+  <script src="https://unpkg.com/hyperapp"></script>
+  <script src="https://unpkg.com/babel-standalone"></script>
+  <script type="text/babel">
+
+  const { h, app } = hyperapp
+  /** @jsx h */
+
+  const state = {
+    greeting: "hello world"
+  }
+  const actions = {}
+  const view = state => <h1 id="title">{state.greeting}</h1>
+
+  app(state, actions, view, document.body)
+
+  </script>
+</body>
