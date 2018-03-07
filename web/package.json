@@ -4,8 +4,8 @@
   "description": "Application collecting IT and tech article for programmer.",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-		"build": "(npm bin)/rollup -cf iife -i index.js -o bundle.js"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "rollup -c"
   },
   "repository": {
     "type": "git",

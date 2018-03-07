@@ -1,18 +1,34 @@
+<!doctype html>
+<html>
+
+<head>
+	<meta charset="utf-8">
+</head>
+
 <body>
-  <script src="https://unpkg.com/hyperapp"></script>
-  <script src="https://unpkg.com/babel-standalone"></script>
-  <script type="text/babel">
+	<script src="https://unpkg.com/hyperapp"></script>
+	<script src="https://unpkg.com/babel-standalone"></script>
+	<script type="text/babel">
 
-  const { h, app } = hyperapp
-  /** @jsx h */
+	 	const { h, app } = hyperapp
 
-  const state = {
-    greeting: "hello world"
-  }
-  const actions = {}
-  const view = state => <h1 id="title">{state.greeting}</h1>
+	 	const state = { greeting: "こんにちは世界" }
 
-  app(state, actions, view, document.body)
-
+		const TodoItem = ({ id, value, done, toggle }) => (
+  		<li class={done && "done"} onclick={e => toggle({ value: done, id: id })}>
+    		{value}
+  		</li>
+		)	
+  	const actions = {}
+	  const view = (state, actions) => 
+		<h1 id="title">{state.greeting}</h1>
+		<ul>
+      		{state.todos.map(({ id, value, done }) => (
+        		<TodoItem id={id} value={value} done={done} toggle={actions.toggle} />
+      		))}
+    	</ul>
+	app(state, actions, view, document.body)
   </script>
 </body>
+
+</html>

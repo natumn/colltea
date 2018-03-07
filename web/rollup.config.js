@@ -3,6 +3,8 @@ import resolve from "rollup-plugin-node-resolve"
 import uglify from "rollup-plugin-uglify"
 
 export default {
+  entry: 'src/main.js',
+  dest: 'dist/bundle.js',
   plugins: [
     babel({
       babelrc: false,
@@ -12,6 +14,8 @@ export default {
     resolve({
       jsnext: true
     }),
-    uglify()
+    uglify(),
+    nodeResolve({ jsnext: true }),
+    commonjs()
   ]
 }
