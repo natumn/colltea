@@ -1,27 +1,22 @@
 {
-  "name": "colltea-web",
-  "version": "0.1.0",
-  "description": "Application collecting IT and tech article for programmer.",
+  "name": "colltea",
+  "version": "1.0.0",
+  "description": "colltea app web front",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "rollup -c"
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
-    "url": "calltea"
+    "url": "git+https://github.com/natumn/colltea.git"
   },
   "author": "natumn",
-  "license": "MIT",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/natumn/colltea/issues"
+  },
+  "homepage": "https://github.com/natumn/colltea#readme",
   "dependencies": {
     "hyperapp": "^1.1.2"
-  },
-  "devDependencies": {
-    "babel-plugin-transform-react-jsx": "^6.24.1",
-    "babel-preset-es2015-rollup": "^3.0.0",
-    "rollup": "^0.56.4",
-    "rollup-plugin-babel": "^3.0.3",
-    "rollup-plugin-node-resolve": "^3.0.3",
-    "rollup-plugin-uglify": "^3.0.0"
   }
 }
